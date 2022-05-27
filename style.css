@@ -1,9 +1,10 @@
+/* css reset  */
 *, ::after, ::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Declaring variables  */
 :root{
 --clr-white: #fff;
 --clr-main: #050734;
@@ -14,6 +15,8 @@
 body{
     background-color: rgb(200, 201, 212);
 }
+/* styling for mobile  */
+/* navigation styling  */
 .logo {
     height: 12px;
 }
@@ -49,7 +52,7 @@ ul {
     padding: 1.5rem 1rem;
     transition: var(--transition);
     text-decoration: none;
- font-weight: 500;
+    font-weight: 500;
 
 }
 
@@ -63,16 +66,13 @@ ul {
     cursor: pointer;
 }
 
-.fa, .fas {
-    font-weight: 900;
+.nav-toggle:hover{
+    transform: rotate(90deg);
+    transition: all 0.5s linear;
 }
-.fa-bars:before {
-    content: "\f0c9";
-}
-.fa, .far, .fas {
-    font-family: "Font Awesome 5 Free";
-}
-
+/* styling to hide the book consultation
+ button and to declave hover state for 
+ navigation links on mobile  */
 @media screen and (max-width: 800px){
     .book-consultation{
         display: none;
@@ -87,7 +87,7 @@ ul {
 
 
 
-
+/* styling for desktop version  */
 @media screen and (min-width: 800px){
     .logo {
         height: 15px;
@@ -114,7 +114,7 @@ ul {
 }
 .links a:hover{
     cursor: pointer;
-    color: #020CF8;
+  font-weight: bold;
 }
 .book-consultation{
     border: 1px solid #050734;
