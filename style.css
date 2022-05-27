@@ -1,0 +1,138 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--clr-white: #fff;
+--clr-main: #050734;
+--transition: all 0.3s linear;
+--spacing: 0.25rem;
+
+}
+body{
+    background-color: rgb(200, 201, 212);
+}
+.logo {
+    height: 12px;
+}
+nav {
+    background: var(--clr-white);
+}
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+ul {
+    list-style-type: none;
+}
+.links {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.show-links {
+    height: 100vh;
+}
+
+.links a {
+    color: var(--clr-main);
+    font-size: 1rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 1.5rem 1rem;
+    transition: var(--transition);
+    text-decoration: none;
+ font-weight: 500;
+
+}
+
+
+.nav-toggle {
+    font-size: 1.5rem;
+    color: var(--clr-main);
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.fa, .fas {
+    font-weight: 900;
+}
+.fa-bars:before {
+    content: "\f0c9";
+}
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+
+@media screen and (max-width: 800px){
+    .book-consultation{
+        display: none;
+    }
+    .links a:hover{
+        background-color: var(--clr-main);
+        color: var(--clr-white);
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: 800px){
+    .logo {
+        height: 15px;
+    }
+.nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.nav-header {
+    padding: 0;
+}
+.links {
+    height: auto;
+    display: flex;
+    text-align: center;
+}
+.links a {
+    padding: 0;
+    margin: 0 0.5rem;
+}
+.links a:hover{
+    cursor: pointer;
+    color: #020CF8;
+}
+.book-consultation{
+    border: 1px solid #050734;
+    color: var(--clr-main);
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.15rem;
+    padding: 0.8rem;
+    background-color: transparent;
+    font-weight: 500;
+    cursor: pointer;
+}
+.book-consultation:hover{
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+}
