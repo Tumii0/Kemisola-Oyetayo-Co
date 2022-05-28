@@ -21,6 +21,8 @@ body{
     height: 12px;
 }
 nav {
+    position:fixed;
+    width: 100%;
     background: var(--clr-white);
 }
 .nav-header {
@@ -71,7 +73,7 @@ ul {
     transition: all 0.5s linear;
 }
 /* styling to hide the book consultation
- button and to declave hover state for 
+ button and to declare hover state for 
  navigation links on mobile  */
 @media screen and (max-width: 800px){
     .book-consultation{
