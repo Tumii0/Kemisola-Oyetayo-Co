@@ -8,21 +8,32 @@
 :root{
 --clr-white: #fff;
 --clr-main: #050734;
+--clr-text: #9FA0A8;
 --transition: all 0.3s linear;
 --spacing: 0.25rem;
 
 }
-body{
-    background-color: rgb(200, 201, 212);
+html{
+    scroll-behavior: smooth;
 }
-/* styling for mobile  */
+
+h1,h2,h3,h4,h5{
+    font-family:  'Merriweather', serif;
+    color: var(--clr-main);
+}
+p{
+    font-family:  'Roboto', sans-serif;
+    color: var(--clr-text);
+}
+/* styling for mobile and general styling */
 /* navigation styling  */
 .logo {
     height: 12px;
 }
 nav {
-    position:fixed;
-    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background: var(--clr-white);
 }
 .nav-header {
@@ -72,6 +83,67 @@ ul {
     transform: rotate(90deg);
     transition: all 0.5s linear;
 }
+
+
+
+main{ 
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    }
+ 
+
+
+
+
+ /* styling for mobile view services section and general styling for services section  */
+.services-container{
+    background-color: var(--clr-white);
+      padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+.services-title {
+    margin-bottom: 4rem;
+    width: auto;
+}
+.underline {
+    height: 0.25rem;
+    width: 7rem;
+    background: var(--clr-main);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+.icon{
+    width: 50px;
+}
+
+.cards-container{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    transition: 2s all ease;
+    
+}
+
+
+.cards{
+    background-color: var(--clr-white);
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     cursor: pointer;
+   transition: var(--transition);
+}
+
+.cards h4{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 /* styling to hide the book consultation
  button and to declare hover state for 
  navigation links on mobile  */
@@ -83,14 +155,15 @@ ul {
         background-color: var(--clr-main);
         color: var(--clr-white);
         cursor: pointer;
+        transition: var(--transition);
     }
 }
 
 
 
-
 /* styling for desktop version  */
 @media screen and (min-width: 800px){
+    /* styling for navigation  */
     .logo {
         height: 15px;
     }
@@ -113,8 +186,10 @@ ul {
 .links a {
     padding: 0;
     margin: 0 0.5rem;
+   
 }
 .links a:hover{
+    transition: var(--transition);
     cursor: pointer;
   font-weight: bold;
 }
@@ -127,6 +202,7 @@ ul {
     background-color: transparent;
     font-weight: 500;
     cursor: pointer;
+    transition: var(--transition);
 }
 .book-consultation:hover{
     background-color: var(--clr-main);
@@ -137,4 +213,45 @@ ul {
     display: none;
 }
 
+/* styling for services section  */
+.services-container{
+   
+    padding: 30px;
+    text-align: center;
+   line-height: 1.5rem;
 }
+
+.services-title{
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 4rem;
+}
+
+
+.cards-container{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cards{
+    padding: 40px;
+   
+}
+.cards:hover{
+    transform: scale(0.9);
+}
+.services-title p{
+   font-size: 1.2rem;
+   
+}
+.underline{
+    margin-bottom: 1rem;
+}
+}
+
+
+
+
