@@ -1,3 +1,116 @@
+/* Tomerstacks' Stylings */
+body {
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/Header-background-edit\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+}
+.hero-content{
+    position: relative;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+.hero-text{
+    color: white;
+    padding-bottom:1rem;
+}
+h1.hero-text{
+    font-size: 3.5em;
+
+}
+.loud{
+    color: coral;
+}
+
+.hero-content-container{
+    max-width:70%;
+}
+.hero-button {
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+    margin-top: 5rem;
+    padding: 0.9375rem 6rem;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+.hero-button:hover {
+    background-color:#050734;
+    transition: var(--transition);
+}
+
+@media only screen and (max-width: 800px) {
+    .hero{
+        width:100vw;
+        height: 170vh;
+    }
+    h1.hero-text{
+        font-size: 2.5em;
+    }
+    .hero-button{
+        padding: 0.9375rem 1rem; 
+    }
+    .hero-button:hover{
+        background-color:#050734;
+        transition: var(--transition);
+    }
+
+  }
+  @media only screen and (max-width: 370px) {
+    .hero{
+        width:100vw;
+        height: 170vh;
+    }
+    h1.hero-text{
+        font-size: 1.5em;
+    }
+    .hero-button{
+        padding: 0.9375rem 2rem; 
+    }
+    .hero-button:hover{
+        background-color:#050734;
+    transition: var(--transition);
+    }
+
+  }
+
+
+/*================================================================ 
+
 /* css reset  */
 *, ::after, ::before {
     margin: 0;
@@ -161,6 +274,7 @@ main{
 
 
 
+
 /* styling for desktop version  */
 @media screen and (min-width: 800px){
     /* styling for navigation  */
@@ -249,7 +363,6 @@ main{
 }
 .underline{
     margin-bottom: 1rem;
-}
 }
 
 
