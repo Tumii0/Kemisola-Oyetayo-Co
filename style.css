@@ -1,112 +1,5 @@
-/* Tomerstacks' Stylings */
-body {
-    margin: 0;
-    padding: 0;
-}
-.hero {
-    position: relative;
-    width: 100%;
-    height: 120vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
-}
-.hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(images/Header-background-edit\ \(1\).jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    filter: brightness(60%);
-}
-.hero-content{
-    position: relative;
-    color: white;
-    text-align: center;
-    margin: 0.625rem;
-}
-.hero-title {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 0;
-}
-.hero-subtitle {
-    font-size: 1rem;
-    font-weight: 200;
-    margin-top: 1rem;
-}
-.hero-text{
-    color: white;
-    padding-bottom:1rem;
-}
-h1.hero-text{
-    font-size: 3.5em;
 
-}
-.loud{
-    color: coral;
-}
-
-.hero-content-container{
-    max-width:70%;
-}
-.hero-button {
-    background-color:transparent;
-    color: white;
-    border: 1px solid white;
-    margin-top: 5rem;
-    padding: 0.9375rem 6rem;
-    font-family: "Monserrat", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 200;
-    cursor: pointer;
-}
-.hero-button:hover {
-    background-color:#050734;
-    transition: var(--transition);
-}
-
-@media only screen and (max-width: 800px) {
-    .hero{
-        width:100vw;
-        height: 170vh;
-    }
-    h1.hero-text{
-        font-size: 2.5em;
-    }
-    .hero-button{
-        padding: 0.9375rem 1rem; 
-    }
-    .hero-button:hover{
-        background-color:#050734;
-        transition: var(--transition);
-    }
-
-  }
-  @media only screen and (max-width: 370px) {
-    .hero{
-        width:100vw;
-        height: 170vh;
-    }
-    h1.hero-text{
-        font-size: 1.5em;
-    }
-    .hero-button{
-        padding: 0.9375rem 2rem; 
-    }
-    .hero-button:hover{
-        background-color:#050734;
-    transition: var(--transition);
-    }
-
-  }
 
 
 /*================================================================ 
@@ -208,8 +101,96 @@ main{
  
 
 
+/* Tomerstacks' Stylings for hero section */
 
+.hero {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/Header-background-edit\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(60%);
+}
+.hero-content{
+    position: relative;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.hero-subtitle {
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+.hero-text{
+    color: white;
+    padding-bottom:1rem;
+}
+h1.hero-text{
+    font-size: 3.5em;
+
+}
+.loud{
+    color: coral;
+}
+
+.hero-content-container{
+    max-width:70%;
+}
+.hero-button {
+    background-color:transparent;
+    color: white;
+    border: 1px solid white;
+    margin-top: 5rem;
+    padding: 0.9375rem 6rem;
+    font-family: "Monserrat", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+    cursor: pointer;
+}
+.hero-button:hover {
+    background-color:#050734;
+    transition: var(--transition);
+}
+
+/* Tomerstack media query for hero section  */
+@media only screen and (max-width: 370px) {
+    .hero{
+        width:100vw;
+        height: 170vh;
+    }
+    h1.hero-text{
+        font-size: 1.5em;
+    }
+    .hero-button{
+        padding: 0.9375rem 2rem; 
+    }
+    .hero-button:hover{
+        background-color:#050734;
+    transition: var(--transition);
+    }
+
+  }
  /* styling for mobile view services section and general styling for services section  */
 .services-container{
     background-color: var(--clr-white);
@@ -273,8 +254,51 @@ main{
     }
 }
 
+/* testiomial section  */
+.testimonial-container{
+    background-color: var(--clr-main);
+    text-align: center;
+    padding: 30px;
+  width: 100%;
+  transition: var(--transition);
+}
+.testimonial-container h2{
+    color: var(--clr-white);
+   
+}
+.author{
+    margin: 30px;
+    font-family:  'Merriweather', serif;
+}
+.testimonial-container p {
+    color: var(--clr-white);
+    line-height: 1.5;
+}
+.testimonial-container .underline{
+    background-color: var(--clr-white);
+}
+.testimonial-picture{
+    width: 80%;
+}
 
-
+.img-container{
+    display: flex;
+    place-items: center;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 40px;
+    transition: var(--transition);
+}
+.prev-btn, .next-btn{
+    background: transparent;
+    border: none;
+    color: var(--clr-white);
+    cursor: pointer;
+    font-size: 30px;
+    transition: var(--transition);
+  
+}
 
 /* styling for desktop version  */
 @media screen and (min-width: 800px){
@@ -327,6 +351,21 @@ main{
 .nav-toggle {
     display: none;
 }
+/* Tomerstacks styling for desktop hero section  */
+.hero{
+    width:100vw;
+    height: 170vh;
+}
+h1.hero-text{
+    font-size: 2.5em;
+}
+.hero-button{
+    padding: 0.9375rem 1rem; 
+}
+.hero-button:hover{
+    background-color:#050734;
+    transition: var(--transition);
+}
 
 /* styling for services section  */
 .services-container{
@@ -366,6 +405,18 @@ main{
     margin-bottom: 1rem;
 }
 
+/* styling for testimonial section  */
+.testimonial-picture{
+    width: 450px;
+}
 
-
-
+.img-container{
+    gap: 10rem;
+}
+.testimonial-words{
+    width: 700px;
+    margin: auto;
+    font-weight: lighter;
+    font-size: 20px;
+}
+}
